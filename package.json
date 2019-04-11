@@ -1,0 +1,53 @@
+{
+  "name": "coffee-snobs",
+  "version": "1.0.0",
+  "description": "Coffee Snobs",
+  "main": "src/client.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --port 3000 --inline --hot",
+    "compile-prod": "webpack -p --progress --colors --display-modules --sort-modules-by",
+    "compile-dev": "webpack --progress --colors --display-modules --sort-modules-by"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.6.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "eslint-config-sardius": "^1.0.6",
+    "eslint-import-resolver-webpack": "^0.8.4",
+    "file-loader": "^1.1.6",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.6",
+    "node-sass": "^4.7.2",
+    "redux-devtools": "^3.4.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  },
+  "dependencies": {
+    "antd": "^3.2.3",
+    "history": "^4.7.2",
+    "kea": "^0.28.2",
+    "kea-saga": "^0.3.2",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1"
+  }
+}
