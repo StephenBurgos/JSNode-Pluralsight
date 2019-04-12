@@ -33,13 +33,18 @@
     "webpack-dev-server": "^2.11.0"
   },
   "dependencies": {
+    "ajax": "0.0.4",
     "antd": "^3.2.3",
+    "bootstrap": "4.3.1",
     "chalk": "2.4.2",
+    "debug": "2.6.6",
     "express": "4.15.2",
     "history": "^4.7.2",
+    "jquery": "3.4.0",
     "kea": "^0.28.2",
     "kea-saga": "^0.3.2",
     "lodash": "^4.17.4",
+    "morgan": "1.9.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
