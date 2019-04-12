@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --port 3000 --inline --hot",
     "compile-prod": "webpack -p --progress --colors --display-modules --sort-modules-by",
-    "compile-dev": "webpack --progress --colors --display-modules --sort-modules-by"
+    "compile-dev": "webpack --progress --colors --display-modules --sort-modules-by",
+    "start": "DEBUG=app nodemon app.js",
+    "lint": "eslint app.js",
+    "lintfix": "eslint app.js --fix"
   },
   "license": "MIT",
   "devDependencies": {
@@ -19,8 +22,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.9",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-sardius": "^1.0.6",
     "eslint-import-resolver-webpack": "^0.8.4",
+    "eslint-plugin-import": "2.16.0",
     "file-loader": "^1.1.6",
     "less": "^3.0.1",
     "less-loader": "^4.0.6",
@@ -38,13 +44,14 @@
     "bootstrap": "4.3.1",
     "chalk": "2.4.2",
     "debug": "2.6.6",
-    "express": "4.15.2",
+    "express": "4.16.4",
     "history": "^4.7.2",
     "jquery": "3.4.0",
     "kea": "^0.28.2",
     "kea-saga": "^0.3.2",
     "lodash": "^4.17.4",
     "morgan": "1.9.1",
+    "nodemon": "1.18.11",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -56,5 +63,14 @@
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1"
+  },
+  "nodemonConfig": {
+    "restartable":"rs",
+    "ignore": ["node_modules/*"],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
   }
 }
