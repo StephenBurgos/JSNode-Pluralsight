@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "antd": "^3.2.3",
-    "express": "^4.16.4",
+    "chalk": "2.4.2",
+    "express": "4.15.2",
     "history": "^4.7.2",
     "kea": "^0.28.2",
     "kea-saga": "^0.3.2",
