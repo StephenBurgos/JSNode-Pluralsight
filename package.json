@@ -44,6 +44,7 @@
     "bootstrap": "4.3.1",
     "chalk": "2.4.2",
     "debug": "2.6.6",
+    "ejs": "2.6.1",
     "express": "4.16.4",
     "history": "^4.7.2",
     "jquery": "3.4.0",
@@ -53,6 +54,7 @@
     "morgan": "1.9.1",
     "nodemon": "1.18.11",
     "prop-types": "^15.6.0",
+    "pug": "2.0.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
@@ -65,8 +67,10 @@
     "reselect": "^3.0.1"
   },
   "nodemonConfig": {
-    "restartable":"rs",
-    "ignore": ["node_modules/*"],
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/*"
+    ],
     "delay": "2500",
     "env": {
       "NODE_ENV": "development",
