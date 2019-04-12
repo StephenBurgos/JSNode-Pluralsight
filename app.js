@@ -15,9 +15,28 @@ app.use('/css', express.static(`${__dirname}/node_modules/bootstrap/dist/css`));
 app.use('/js', express.static(`${__dirname}/node_modules/bootstrap/dist/js`));
 app.use('/js', express.static(`${__dirname}/node_modules/jquery/dist`));
 
+const books = [{
+  title: 'The Time Machine',
+  genre: 'Science Fiction',
+  author: 'H. G. Wells',
+  read: false,
+},
+{
+  title: 'The Dark World',
+  genre: 'Fantasy',
+  author: 'Henry Kuttner',
+  read: false,
+}];
 bookRouter.route('/')
   .get((reg, res) => {
-    res.send('Hello books');
+    res.render(
+      'books',
+      {
+        nav: [{ link: '/books', title: 'Books' }, { link: '/authors', title: 'Authors' }],
+        title: 'Library',
+        books,
+      },
+    );
   });
 
 bookRouter.route('/single')
@@ -31,8 +50,8 @@ app.get('/', (req, res) => {
     'index',
     {
       nav: [{ link: '/books', title: 'Books' }, { link: '/authors', title: 'Authors' }],
-      title: 'Library'
-    }
+      title: 'Library',
+    },
   );
 });
 
