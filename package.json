@@ -8,8 +8,7 @@
     "compile-prod": "webpack -p --progress --colors --display-modules --sort-modules-by",
     "compile-dev": "webpack --progress --colors --display-modules --sort-modules-by",
     "start": "DEBUG=app nodemon app.js",
-    "lint": "eslint app.js",
-    "lintfix": "eslint app.js --fix"
+    "lint": "eslint --fix"
   },
   "license": "MIT",
   "devDependencies": {
