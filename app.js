@@ -23,6 +23,11 @@ sql.connect(config).catch(err => debug(err));
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 app.use(morgan('tiny'));
+
+app.use((req,res,next) => {
+  debug('my middleware');
+  next();
+});
 app.use(express.static(`${__dirname}/public`));
 app.use('/css', express.static(`${__dirname}/node_modules/bootstrap/dist/css`));
 app.use('/js', express.static(`${__dirname}/node_modules/bootstrap/dist/js`));
