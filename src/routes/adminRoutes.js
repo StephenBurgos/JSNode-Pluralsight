@@ -4,7 +4,7 @@ const debug = require('debug')('app:adminRoutes');
 
 const adminRouter = express.Router();
 
-function router(/* nav */) {
+function router() {
   const books = [{
     title: 'The Time Machine',
     genre: 'Science Fiction',
